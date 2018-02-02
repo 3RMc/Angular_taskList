@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="taskList">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+        <script src="app.js"></script>
+        <title>Task List</title>
+    </head>
+    <body ng-controller="taskCtrl">
+        <h1>Добавь заданий!</h1>
+        <form>
+            <input type="text" ng-model="tempInput">
+            <button ng-click="addNew()">Добавить</button>
+        </form>
+        <div>
+            <p ng-repeat="task in tasksArray">{{task}} <button ng-click="deleteTask()">Удалить</button></p>
+        </div>
+    </body>
+</html>
